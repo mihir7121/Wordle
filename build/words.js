@@ -1,4 +1,6 @@
 export const WORDS = [
+    'meehu',
+    'jeenu',
     'wines',
     'burma',
     'soups',
