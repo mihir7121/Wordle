@@ -4,7 +4,7 @@ const NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
-let rightGuessString = WORDS[Math.floor(Math.random() * 28)];// * WORDS.length
+let rightGuessString = WORDS[Math.floor(Math.random() * 5785)];// * WORDS.length
 
 
 // let delay = 250 * i
@@ -115,7 +115,7 @@ function checkGuess() {
     }
 
     if (guessString === rightGuessString) {
-        toastr.success("You guessed right! Burrito loves you!")
+        toastr.success("You guessed it right! You are a mastermind!")
         guessesRemaining = 0
         return
     } else {
@@ -124,7 +124,7 @@ function checkGuess() {
         nextLetter = 0;
 
         if (guessesRemaining === 0) {
-            toastr.error("You've run out of guesses! I am disappointed, honey!")
+            toastr.error("You've run out of guesses! Better luck next time!")
             toastr.info(`The right word was: "${rightGuessString}"`)
         }
     }
